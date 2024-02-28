@@ -17,6 +17,8 @@ modelled entities. Instead they give a high-level overview of the entities and r
 ## Topology
 
 ![Nephio Topology](diagrams/topology.svg)
+<object>diagrams/topology.svg</object>
+
 
 ## Requirements
 
