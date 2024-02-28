@@ -16,13 +16,15 @@ modelled entities. Instead they give a high-level overview of the entities and r
 
 ## Topology
 
-![Nephio Topology](diagrams/topology.svg)
-<object>diagrams/topology.svg</object>
+![Topology](diagrams/topology.svg)
 
+## Network Requirements
 
-## Requirements
+![Network Requirements](diagrams/requirements.svg)
 
-![Nephio Requirements](diagrams/requirements.svg)
+## Capacity Requirements
+
+![Capacity Requirements](diagrams/capacity-requirements.svg)
 
 # Issues
 Please raise any issues in the [nephio](https://github.com/nephio-project/nephio) repository
