@@ -1,0 +1,45 @@
+# Types
+classes: {
+    topology: {
+        style: {
+            fill: "#ffcccc"
+            stroke: "#000000"
+        }
+    }
+}
+
+NFTopology
+NFTopology.class: topology
+NFInstance
+NFInstance.class: topology
+NFTemplate
+NFTemplate.class: topology
+NFInterface
+NFInterface.class: topology
+Capacity
+NFClass
+NFClass.class: topology
+NetworkInstance
+PackageRevisionReference
+PackageRevisionReference.class: topology
+
+# A topology consists of multiple NF instances
+NFTopology -> NFInstance: 1..n
+
+# An NF instance is an instance of an NF described in a template
+NFInstance -> NFTemplate: Refers
+
+# A template can specify multiple interfaces
+NFTemplate -> NFInterface: 1..n
+
+# A template can specify a capacity
+NFTemplate -> Capacity: Refers
+
+# A template can refer to a class of NF
+NFTemplate -> NFClass: Refers \(by name\)
+
+# An interface definition can refer to a network it is attached to
+NFInterface -> NetworkInstance: Refers \(by name\)
+
+# An NF Class refers to the package revision it is associated with
+NFClass -> PackageRevisionReference: Refers

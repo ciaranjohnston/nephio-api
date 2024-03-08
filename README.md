@@ -13,6 +13,13 @@ developed ny Tal Liron.
 
 Diagrams in this context have been kept as simple as possible for now, and do not attempt to convey all the details of the
 modelled entities. Instead they give a high-level overview of the entities and relationships that can be accessed and modified via the Nephio API, and provide reference to documentation where available.
+```mermaid
+flowchart TD
+    NFTopology
+    NFTopologySpec[NFTopologySpec]
+    NFTopologyStatus[NFTopologyStatus]
+    NFTopology-.1 to 1...-NFTopologySpec
+```
 
 ## Topology
 
