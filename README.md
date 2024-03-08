@@ -18,7 +18,7 @@ modelled entities. Instead they give a high-level overview of the entities and r
 
 ```mermaid
 flowchart TD
-    NFTopology-- 1 to 1 -->NFInstance
+    NFTopology-- 1 .. n -->NFInstance
     NFInstance -. refers .-> NFTemplate
     NFTemplate -- 1..n --> NFInterface
     NFInterface -. refers (by name) .-> NetworkInstance
