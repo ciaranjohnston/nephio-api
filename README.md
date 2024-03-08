@@ -13,15 +13,22 @@ developed ny Tal Liron.
 
 Diagrams in this context have been kept as simple as possible for now, and do not attempt to convey all the details of the
 modelled entities. Instead they give a high-level overview of the entities and relationships that can be accessed and modified via the Nephio API, and provide reference to documentation where available.
+
+## Topology (Mermaid minimized)
+
 ```mermaid
 flowchart TD
-    NFTopology
-    NFTopologySpec[NFTopologySpec]
-    NFTopologyStatus[NFTopologyStatus]
-    NFTopology-.1 to 1...-NFTopologySpec
+    NFTopology-- 1 to 1 -->NFInstance
+    NFInstance -. refers .-> NFTemplate
+    NFTemplate -- 1..n --> NFInterface
+    NFInterface -. refers (by name) .-> NetworkInstance
+    NFTemplate-.refers..->Capacity
+    NFTemplate -. refers (by name) .-> NFClass
+    NFClass -. refers .-> PackageRevisionReference
+
 ```
 
-## Topology
+## Topology - original draw.io
 
 ![Topology](diagrams/topology.svg)
 
