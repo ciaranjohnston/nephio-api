@@ -9,12 +9,10 @@ relationships, and is based on an
 [original document](https://docs.google.com/document/d/1-5nlpY4FbuhWtdKTvIqPOv4bWmA6zx6TdHoEfk9Jc_Q/edit)
 developed ny Tal Liron.
 
-## How to read this page
+The aim is to keep these diagrams as simple as possible for now and only convey the important aspects of the modelled entities. As such they are intended to give a high-level overview of the entities and relationships that can be accessed and modified via the Nephio API, and provide reference to detailed documentation, generated from the code, where available.
 
-Diagrams in this context have been kept as simple as possible for now, and do not attempt to convey all the details of the
-modelled entities. Instead they give a high-level overview of the entities and relationships that can be accessed and modified via the Nephio API, and provide reference to documentation where available.
 
-## Topology (Mermaid minimized)
+## Topology
 
 ```mermaid
 flowchart TD
@@ -25,12 +23,15 @@ flowchart TD
     NFTemplate-.refers..->Capacity
     NFTemplate -. refers (by name) .-> NFClass
     NFClass -. refers .-> PackageRevisionReference
-
+   click NFTopology "https://doc.crds.dev/github.com/nephio-project/api/topology.nephio.org/NFTopology/v1alpha1@v2.0.0" "NFTopology"
+   click NFInstance "https://github.com/nephio-project/api/blob/main/nf_topology/v1alpha1/nf_topology_types.go#L59" "NFInstance"
+   click NFTemplate "https://github.com/nephio-project/api/blob/main/nf_topology/v1alpha1/nf_topology_types.go#L45" "NFTemplate"
+   click NFInterface "https://github.com/nephio-project/api/blob/main/nf_topology/v1alpha1/nf_topology_types.go#L35" "NFInterface"
+   click Capacity "https://doc.crds.dev/github.com/nephio-project/api/req.nephio.org/Capacity/v1alpha1@v2.0.0" "Capacity"
+   click NFClass "https://doc.crds.dev/github.com/nephio-project/api/req.nephio.org/NFClass/v1alpha1@v2.0.0" "NFClass"
+   click PackageRevisionReference "https://github.com/nephio-project/api/blob/main/nf_topology/v1alpha1/nf_class_types.go#L25" "PackageRevisionReference"
+   
 ```
-
-## Topology - original draw.io
-
-![Topology](diagrams/topology.svg)
 
 ## Network Requirements
 
